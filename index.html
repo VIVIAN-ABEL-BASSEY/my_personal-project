@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal project</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class=" text-black bg-center"> 
+    <!-- <h1 class="bg-green-900">hellloooo</h1>  -->
+    <header class="bg-slate-600 text-2xl fixed">
+        <nav class="flex items-center justify-between px-12 h-24">
+            <div class="flex font-bold text-4xl">
+                <div class="toggleButton"><i class="fa-sharp fa-solid fa-bars pt-1"></i></div>
+                <a href="#" class="text-black text-4xl font-bold px-2 py-2 bg-gradient-to-r from-white to-gray-600"><h1>Jumia plus</h1></a>
+            </div>
+            <div class="flex bg-slate-200 px-2 py-2 w-5/12 rounded-full justify-between">
+                <i class="fa-solid fa-magnifying-glass p-2 "></i>
+                <input type="text" placeholder="search products,brands and categories" class="bg-slate-200 container border-4 rounded-full"> 
+            </div>
+            <div>
+                <button class=" bg-slate-200 rounded-xl sm:hidden p-2 text-black hover:bg-w">Search</button>
+            </div>
+            <div class="dropdownMenu mt-8 absolute -top-full left-0 bg-slate-300 w-80 flex flex-col gad-6 items-center py-2 text-lg font-bold">
+                <ul class="flex flex-col items-center gap-2 mt-2">
+                    <li class="hover:bg-white"><a href="#">home</a></li>
+                    <li class="hover:bg-white" ><a href="#">products</a></li>
+                    <li class="hover:bg-white"><a href="#">services</a></li>
+                    <li class="hover:bg-white"><a href="#">contacts</a></li>
+                    <li class="hover:bg-white"><a href="#">about us</a></li>
+                </ul>
+                <div class="flex flex-col items-center gap-4 pt-4 ">
+                    <button class="text-red-950 hover:bg-white">log in</button>
+                    <button class="text-black bg-slate-200 p-2 rounded-lg hover:bg-white">sign up</button>
+                    
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="flex accountDropdownIcon bg-slate-500 hover:bg-slate-300 p-2 mr-4">
+                    <i class="fa-solid fa-user p-2"></i>
+                    <div class="flex "><h1 class="pr-2">Account</h1><i class="accountDropdownIcon fa-solid fa-caret-down p-2 "></i></div>
+                </div> 
+                <div class="accountDropdownItem absolute mt-8 -top-full left-0 bg-slate-200 w-72 flex flex-col gad-6 items-center py-2 text-lg font-bold">
+                    <ul class="flex flex-col items-center gap-2 mt-10">
+                        <li class="bg-orange-700 w-60 text-center hover:bg-white p-3">sign in</li><hr>
+                        <li class="hover:bg-white"><a href="#"><i class="fa-solid fa-user p-2"></i>my Account</a></li>
+                        <li class="hover:bg-white" ><a href="#"><i class="fa-solid fa-bag-shopping pr-12"></i>Orders</a></li>
+                        <li class="hover:bg-white"><a href="#"><i class="fa-solid fa-heart pr-2"></i>Saved Items</a></li>
+                    </ul>
+                </div>
+
+                <div class="hover:bg-slate-300 flex mr-4 helpIcon  bg-slate-500">
+                    <i class="fa-solid fa-circle-question p-2"></i>
+                    <div class="">
+                        <h1>Help</h1>
+                        <i class="helpIcon fa-solid fa-caret-down p-260"></i>
+                    </div>
+                </div>
+
+                <div class="helpItem absolute -top-full right-0 mt-8 bg-slate-200 w-72 flex flex-col gad-6 items-center py-2 text-lg font-bold">
+                    <ul class="flex flex-col items-center gap-2 mt-10">
+                        <li class=" hover:bg-white ">Help center</li><hr>
+                        <li class="hover:bg-white"><a href="#">place an order</a></li>
+                        <li class="hover:bg-white" ><a href="#">payment options</a></li>
+                        <li class="hover:bg-white"><a href="#">Track an order</a></li>
+                        <li class="hover:bg-white"><a href="#">cancel an order</a></li>
+                        <li class="hover:bg-white"><a href="#">return and refund</a></li>
+                        <button class="bg-orange-700 w-60 text-center hover:bg-white p-3 rounded-lg">live chat</button>
+                    </ul>
+                </div>
+
+                <div class="flex text-2xl font-bold bg-slate-500 hover:bg-slate-200"><a href="#">
+                    <i class="  fa-solid fa-cart-plus p-2"></i><h1 class="sm:hidden">cart</h1></a>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    <br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      let toggleBtn =document.querySelector("div.toggleButton")
+      let dropdown = document.querySelector("div.dropdownMenu")
+      toggleBtn.addEventListener("click",function(){
+        dropdown.classList.toggle("top-16")
+      })
+      let acctDropdown = document.querySelector("div.accountDropdownIcon")
+      let acctDropdownItems = document.querySelector("div.accountDropdownItem")
+      acctDropdown.addEventListener("click",function(){
+        acctDropdownItems.classList.toggle("top-16")
+      })
+      let helpIcon =document.querySelector("div.helpIcon")
+      let helpItem = document.querySelector("div.helpItem")
+      helpIcon.addEventListener("click",function(){
+        helpItem.classList.toggle("top-16")
+      })
+    </script>
+</body>
+</html>

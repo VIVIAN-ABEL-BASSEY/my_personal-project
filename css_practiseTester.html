@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #283149;
+            text-align: center;
+        }
+        h1 {
+            font-size: 5rem;
+            color: #DBEDF3;
+            font-family: "Arvo", cursive;
+            text-shadow: 3px 0 #DA0463;
+
+}
+
+        .art{
+            margin: 10% auto;
+        }
+        .drum{
+            color: red;
+            outline: none;
+            border: 10px solid #404B69;
+            font-size: 5rem;
+            font-family: 'Arvo', cursive;
+            line-height: 2;
+            font-weight: 900;
+            text-shadow: 3px 0 blue;
+            border-radius: 15px;
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            margin: 10px;
+            background-color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Drum</h1>
+    <div class="art">
+        <button class="drum">w</button>
+        <button class="drum">a</button>
+        <button class="drum">s</button>
+        <button class="drum">d</button>
+        <button class="drum">j</button>
+        <button class="drum">k</button>
+        <button class="drum">l</button>
+    </div>
+
+
+    <script>
+        // let m1 =function(){
+        //     alert("method1")
+        // }
+        // m1()
+        // let m2 = ()=>{
+        //     alert("method2")
+        // }
+        // m2()
+        document.querySelector("button").addEventListener("click",handleEvents)
+        function handleEvents(){
+            alert("clicked sucessfully")
+        }
+    </script>
+</body>
+</html>
